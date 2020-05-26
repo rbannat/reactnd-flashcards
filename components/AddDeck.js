@@ -12,7 +12,7 @@ export default function AddDeck({ navigation }) {
   const submit = () => {
     dispatch(addDeck(value))
     setValue('')
-    navigation.navigate('Decks')
+    navigation.navigate('Deck', {title: value})
     addDeckToStorage(value)
   }
 
